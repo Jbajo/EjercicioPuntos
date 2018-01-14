@@ -54,9 +54,8 @@ private ArrayList <Punto> listaPuntos= new ArrayList <>();
 				mostrarPunto();
 				break;	
 			case 4:
-				calculaDistancia();
-				break;		
-				
+				calculaDistanciaPuntos();
+				break;				
 			case 5:
 				calculaDistanciaCentro();
 				break;
@@ -70,7 +69,7 @@ private ArrayList <Punto> listaPuntos= new ArrayList <>();
 	private void crearPunto() {
 		
 		Punto punto;
-		float x, y;
+		double x, y;
 
 		Scanner sc = new Scanner (System.in);
 		System.out.println("Introduzca la coordenada X");
@@ -98,7 +97,7 @@ private ArrayList <Punto> listaPuntos= new ArrayList <>();
 			}
 		}
 	
-	private void calculaDistancia() {
+	private void calculaDistanciaPuntos() {
 		int opcion1 = 0;
 		int seleccion1 = 0;
 		int opcion2 = 0;
@@ -106,7 +105,7 @@ private ArrayList <Punto> listaPuntos= new ArrayList <>();
 		
 		Scanner sc = new Scanner (System.in);
 		
-		if(listaPuntos.size()>0) {
+		if(listaPuntos.size()>1) {
 			for (Punto punto : listaPuntos) {
 				System.out.println("------------------------------------------------");
 				System.out.println("Seleccione un punto");
@@ -136,7 +135,7 @@ private ArrayList <Punto> listaPuntos= new ArrayList <>();
 		
 		}
 		else {
-			System.out.println("El Gestor esta vacio todavia debe crear un punto antes");
+			System.out.println("Son necesarios dos puntos para calcular la distancia");
 		}
 		
 	}

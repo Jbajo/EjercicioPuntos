@@ -7,21 +7,21 @@ package com.cice.modelo;
  */
 public class Punto {
 	
-	private float x;
-	private float y;
+	private double x;
+	private double y;
 	
 	public Punto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Punto(float x, float y) {
+	public Punto(double x, double y) {
 		super();
 		this.x = x;
 		this.y = y;
 	}
 
-	public float getX() {
+	public double getX() {
 		return x;
 	}
 
@@ -29,7 +29,7 @@ public class Punto {
 		this.x = x;
 	}
 
-	public float getY() {
+	public double getY() {
 		return y;
 	}
 
@@ -49,7 +49,6 @@ public class Punto {
 	}
 	
 	public double calculaDistanciaCentroCoordenadas() {
-		
 		
 		return Math.sqrt(Math.pow(this.getX(),2)+Math.pow(this.getY(),2));		
 		
